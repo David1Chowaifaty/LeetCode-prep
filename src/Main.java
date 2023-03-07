@@ -17,7 +17,7 @@ public class Main {
 //        }
 
         LongestSubstringWithoutRepeatingCharacters l=new LongestSubstringWithoutRepeatingCharacters();
-       System.out.println(l.lengthOfLongestSubstring("dabrtyd"));
+       System.out.println(l.lengthOfLongestSubstring("abcdab"));
 
 
     }
