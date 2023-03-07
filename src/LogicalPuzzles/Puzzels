@@ -1,0 +1,58 @@
+Ex1
+
+You have two identical eggs and access to a 100-story building.
+You need to find the highest floor from which an egg will not break if dropped.
+What is the minimum number of drops you need to make in order to find this floor?
+
+The solution involves using a binary search approach to reduce the number of drops required. Here is one possible solution:
+
+Start by dropping one egg from the 50th floor.
+
+If the egg breaks, you know that the highest floor the egg can survive a drop from is somewhere between the 1st and 49th floors.
+You can then drop the second egg starting from the 1st floor and working your way up until it breaks, which will take a maximum of 49 drops.
+This gives a total of 50 drops.
+
+If the egg does not break when dropped from the 50th floor, you know that the highest floor
+the egg can survive a drop from is somewhere between the 51st and 100th floors.
+You can then drop the second egg starting from the 51st floor and working your way up until it breaks,
+which will take a maximum of 49 drops. This gives a total of 51 drops.
+In either case, the worst-case number of drops required is 51
+
+
+
+Ex2
+
+You have a bag of coins, some of which are counterfeit and weigh slightly less than real coins.
+You have a balance scale, and can only use it three times.
+What is the minimum number of coins you need to weigh in order to identify all the counterfeit coins?
+
+
+Weigh an equal number of coins on both sides of the balance scale in the first weighing.
+If the scale tips, we know that the bag contains at least one counterfeit coin.
+Otherwise, all the coins in the bag are genuine, and we can stop.
+
+If the scale tipped in the first weighing, we can use the second weighing to identify one counterfeit coin.
+Split the coins into three equal groups and weigh two of them against each other.
+If the scale tips, we know that one of the two weighed groups contains a counterfeit coin, and we can move on to step 3.
+If the scale does not tip, we know that the remaining group contains a counterfeit coin,
+and we can identify it by weighing one of its coins against a genuine coin from one of the other groups.
+
+If we have identified one counterfeit coin in step 2,
+we can use the third weighing to identify all the remaining counterfeit coins.
+Split the remaining coins into three equal groups and weigh two of them against each other.
+If the scale tips, we know that one of the two weighed groups contains a counterfeit coin,
+and we can use the same process as in step 2 to identify it. If the scale does not tip,
+we know that the remaining group contains all the remaining counterfeit coins,
+and we can identify them by weighing one of their coins against a genuine coin from one of the other groups.
+
+
+Ex3
+
+Here is one way to measure exactly 15 minutes using the two hourglasses:
+
+Start both hourglasses at the same time.
+Wait for the 7-minute hourglass to finish running out of sand.
+When the 7-minute hourglass is finished, flip it over to start the timer again.
+Continue letting the sand run out of the 11-minute hourglass.
+When the 11-minute hourglass finishes running out of sand, flip the 7-minute hourglass over again.
+Let the 7-minute hourglass run until it is empty, and at this point exactly 15 minutes will have passed since you started.
